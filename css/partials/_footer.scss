@@ -1,0 +1,91 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    .asociate{
+        background-color: $maincolor;
+        display: flex;
+        flex-grow: 1;
+        padding-inline: 2rem;
+        justify-content: space-around  ;
+        align-items: center;
+        .texto__socio{
+            color: white;
+            font-size: 22px;
+        }
+        .texto__chiquito{
+            color: #aaa3a3;
+            font-size: 12px;
+            padding: 1rem;
+        }
+    }
+.cont__footer{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.25rem;
+    .cont__contacto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .texto__redes{
+        font-size: 20px;
+    }
+    .redes{
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+        border-bottom: solid $maincolor 1px;
+        .img__redes{
+            width: 50px;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .copirigth{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+.subcont__redes{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    border-bottom: solid black 0.5px;
+
+    .cajita{
+        display: flex;
+        flex-wrap: wrap;
+        .titulo__contacto{
+            font-size: 20px;
+        }
+    }
+}
+.boton{
+    height: 2rem;
+    border-radius: 7px;
+    padding: .5rem;
+}
+.mail{
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+.chatea{
+    color: #0088e291;
+    position: fixed;
+    top: 89%;
+    width: 50px;
+    height: 50px;
+    right: 50px;
+    transition: 1s;
+    &:hover{
+        transform: scale(1.3);
+        }
+    }
+}
