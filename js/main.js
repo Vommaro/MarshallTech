@@ -66,7 +66,7 @@ combos.forEach((combo) => {
             <li class="item__lista">🎮 GPU: ${combo.lista.item6}</li>
             <li class="item__lista">🔋 Fuente: ${combo.lista.item7}</li>
         </ul>
-        <p>$${combo.precio}</p>        
+        <p class="precio">$${combo.precio}</p>        
     </div>
         
     `;

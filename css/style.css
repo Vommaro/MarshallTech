@@ -151,6 +151,10 @@ a {
   display: none;
 }
 
+.precio {
+  font-size: 25px;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -243,64 +247,63 @@ a {
 }
 
 .main .conteiner__main {
-  border-left: solid rgb(122, 23, 179) 3px;
-  border-right: solid rgb(122, 23, 179) 3px;
-  align-items: center;
+  display: flex;
+  border-left: solid rgb(122, 23, 179) 2px;
+  border-right: solid rgb(122, 23, 179) 2px;
 }
 .main .conteiner__main .conteiner__lista {
-  padding: 0;
+  background-color: rgba(63, 61, 61, 0.836);
+  padding: 1rem;
   flex-wrap: wrap;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-content: space-around;
-  border: solid rgb(122, 23, 179) 4px;
+  width: auto;
+  height: -moz-min-content;
+  height: min-content;
 }
 .main .conteiner__main .conteiner__lista .text__filtros {
+  background-color: rgba(141, 136, 136, 0.829);
   font-size: 16px;
   font-family: "roboto", sans-serif;
-  border: solid rgb(122, 23, 179) 1px;
   border-radius: 7px;
-  text-align: center;
-}
-.main .conteiner__main .conteiner__lista .text__filtros:hover {
-  background-color: rgb(122, 23, 179);
-  transform: scale(1.1);
-  font-size: 20px;
+  padding: 0.5rem;
 }
 .main .conteiner__main .conteiner__lista .lista__filtros {
   flex-wrap: wrap;
-  align-self: center;
 }
 .main .conteiner__main .conteiner__lista .item__lista {
-  color: white;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
-}
-@media screen and (max-width: 992px) {
-  .main .conteiner__main .conteiner__lista {
-    display: none;
-  }
+  font-size: 22px;
 }
 .main .conteiner__main .conteiner__lista .button__filtros {
-  border: solid rgb(122, 23, 179) 2px;
+  margin: 0.3rem;
+  background-color: rgb(122, 23, 179);
 }
 .main .conteiner__main .conteiner__lista .button__filtros:hover {
-  background-color: rgb(122, 23, 179);
   border: solid white 2px;
 }
 .main .conteiner__main .conteiner__productos {
+  display: flex;
   flex-direction: column;
   flex-grow: 1;
+  width: 60%;
+  position: relative;
 }
 .main .conteiner__main .conteiner__productos .producto {
-  padding: 0;
+  padding: 0.5rem;
+  display: flex;
+  margin: 1rem;
+  flex-direction: row;
 }
 .main .conteiner__main .conteiner__productos .producto .img__produc {
   padding: 0;
   max-width: 250px;
   max-height: 200px;
+}
+.main .conteiner__main .conteiner__productos .cajita {
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .animated-button {

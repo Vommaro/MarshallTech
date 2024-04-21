@@ -1,69 +1,64 @@
 .main{
 .conteiner__main{
-    // position: relative;
-    border-left: solid $maincolor 3px;
-    border-right: solid $maincolor 3px;
-    align-items: center;
+    display: flex;
+    border-left: solid $maincolor 2px;
+    border-right: solid $maincolor 2px;
         .conteiner__lista{
-        padding: 0;
+        background-color: rgba(63, 61, 61, 0.836);
+        padding: 1rem;
         flex-wrap: wrap;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        align-content: space-around;
-        border: solid $maincolor 4px;
-        
+        // flex-direction: column;
+        // align-items: flex-start;
+        // align-content: space-around;
+        width: auto;
+        height: min-content;
         .text__filtros{
+            background-color: rgba(141, 136, 136, 0.829);
             font-size: 16px;
             font-family: "roboto", sans-serif;
-            border: solid $maincolor 1px;
+            // border: solid $maincolor 1px;
             border-radius: 7px;
-            text-align: center;
-            &:hover{
-                background-color: $maincolor;
-                transform: scale(1.1);
-                font-size: 20px;
-            }
-        
+            padding: 0.5rem;
         }
-        
             .lista__filtros{
                 flex-wrap: wrap;
-                align-self: center;
         }
             .item__lista{
-                color: white;
                 text-decoration: none;
                 font-family: "Roboto", sans-serif;
-                font-size: 30px;
+                font-size: 22px;
         }
-            @include tablet{
-                display: none;
-            }
-
             .button__filtros{
-                // background-color: transparent;
-                border: solid $maincolor 2px;
+                margin: 0.3rem;
+                background-color: $maincolor;
                 &:hover{
-                    background-color: $maincolor;
                     border: solid white 2px;
-                                    }
+                    }
+                }
             }
-        }
-        
-
 .conteiner__productos{
+    display: flex;
     flex-direction: column;
     flex-grow: 1;
-
+    width: 60%;
+    position: relative;
     .producto{
-        padding: 0;
+        padding: 0.5rem;
+        display: flex;
+        margin: 1rem;
+        flex-direction: row;
         .img__produc{
             padding: 0;
             max-width: 250px;
             max-height: 200px;
+                }
             }
-        }
+            .cajita{
+                justify-content: space-around;
+                align-items: center;
+                flex-grow: 1;
+            }
         }
     }
 }
