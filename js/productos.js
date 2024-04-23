@@ -1,4 +1,4 @@
-const carrier = [];
+let carrier = JSON.parse(localStorage.getItem("carrier")) || [];
 const productos = [
     {
         titulo: "Placa de Video EVGA GeForce RTX 3090 12GB GDDR6 Ventus OC",
@@ -69,10 +69,64 @@ productos.forEach((producto) => {
     `;
 
     btn.addEventListener("click", () => {
-        agregarAlCarrito(combo);
+        agregarAlCarrito(producto);
     })
-
-
     div.append(btn);
     conteinerProductos.append(div);
 })
+function actualizarProductos() {
+    if (carrier.length === 0) {
+        carritoVacio.classList.remove("d-none");
+        carritoProductos.classList.add("d-none");
+    } else {
+        carritoVacio.classList.add("d-none");
+        carritoProductos.classList.remove("d-none");
+
+        carritoProductos.innerHTML = "";
+        carrier.forEach(producto => {
+            const div = document.createElement("div");
+            div.classList.add("carrito-producto");
+            div.innerHTML = `
+                <h3>${producto.titulo}</h3>
+                <p>$${producto.precio}</p>
+                <p>Cant: ${producto.cantidad}</p>
+                <p>Subt: $${producto.cantidad * producto.precio}</p>
+            `;
+
+            const btn = document.createElement("button");
+            btn.classList.add("carrito-producto-btn");
+            btn.innerText = "✖️";
+            btn.addEventListener("click", () => {
+                borrarProducto(producto);
+            })
+            div.append(btn);
+
+            carritoProductos.append(div);
+        })
+    }
+    actualizarTotal2();
+    localStorage.setItem("carrier", JSON.stringify(carrier));
+}
+const agregarProducto = (producto) => {
+    const itemEncontrado = carrier.find(item => item.titulo === producto.titulo);
+    if (itemEncontrado) {
+        itemEncontrado.cantidad++;
+    } else {
+        carrier.push({...producto, cantidad: 1});
+    }
+    actualizarProductos();
+}
+const borrarProducto = (producto) => {
+    const prodIndex = carrier.findIndex(item => item.titulo === producto.titulo);
+    carrier.splice(prodIndex, 1);
+    actualizarProductos();
+}
+
+const actualizarTotal2 = () => {
+    const total = carrier.reduce((acc, prod) => acc + (prod.precio * prod.cantidad), 0);
+    carritoTotal.innerText = `$${total}`;
+}
+
+actualizarTotal2();
+localStorage.setItem("carrier", JSON.stringify(carrier));
+actualizarProductos();

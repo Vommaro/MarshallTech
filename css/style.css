@@ -68,6 +68,7 @@ a {
   position: relative;
 }
 .header .nav .cont__menu .menu .item__menu {
+  border-bottom: solid 2px black;
   display: flex;
   padding-inline: 1rem;
   margin-inline: 1rem;
@@ -80,7 +81,7 @@ a {
   border: solid white 2px;
   color: rgb(122, 23, 179);
   border-radius: 7px;
-  transform: translateY(-0.2rem);
+  transform: translateY(-0.1rem);
 }
 
 .main {

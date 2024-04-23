@@ -52,6 +52,7 @@
                 flex-grow:  1;
                 position: relative;
                 .item__menu{
+                    border-bottom: solid 2px black;
                     display: flex;
                     padding-inline: 1rem;
                     margin-inline: 1rem;
@@ -63,7 +64,7 @@
                         border: solid white 2px;
                         color: $maincolor;  
                         border-radius: 7px;
-                        transform: translateY(-0.2rem);         
+                        transform: translateY(-0.1rem);         
                     }
                 }
             }
