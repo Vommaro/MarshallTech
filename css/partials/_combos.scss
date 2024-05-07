@@ -7,12 +7,9 @@
     margin: 0;
     .conteiner__main{
         .combo{
+            position: relative;
             display: flex;
             flex-direction: row;
-            flex-grow: 1;
-            margin-top: 1rem;
-            margin-bottom: 2rem;
-            margin: 0;
             align-items: center;
             justify-content: center;    
                 .texto__combo{
@@ -69,4 +66,25 @@
 }
 .precio{
     font-size: 25px;
+}
+.contIrAlCarrito {
+    position: absolute;
+    background-color: rgba(182, 167, 167, 0.74);
+    border-radius: 10px;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    color: black;
+    padding-block: 0.5rem;
+    margin-right: 1rem;
+}
+.numCarrito {
+    margin-left: 5px;
+    text-align: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    
 }

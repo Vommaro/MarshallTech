@@ -1,55 +1,21 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-console.log(carrito);
-const combos = [
-    {
-        titulo: "PC Oficina",
-        precio: 250,
-        img: "./img/PC_Off.png",
-        lista:{
-            item1: "Kit Mid Tower Performance 2800W",
-            item2: "Intel Core i3 n10500k",
-            item3: "MSI A520-A PRO",
-            item4: "8GB DDR4 3200MHZ ADATA VALUE",
-            item5: "SSD M2 PCI-E 256GB//HHD 1TB SeaGate Barracuda",
-            item6: "Placa de Video Geforce GT 710 2GB Ram MSI",
-            item7: "Fuente y cooler Incluidos con el Gabinete",
-        },
-    },
-    {
-        titulo: "PC Gamer",
-        precio: 500,
-        img: "./img/PC_Gamer2.PNG",
-        lista:{
-            item1: "Gabinete Mid Tower Solarmax 5901 6 Fan Rgb Vidrio Templado",
-            item2: "Procesador Intel Core I5 12600K 4.9 GHZ",
-            item3: "Motherboard 1700 12°Gen Msi Pro H610m-G DDR4",
-            item4: "8GB DDR4 3200 Mhz Corsair Vengeance (x2)",
-            item5: "Disco Solido SSD 480GB",
-            item6: "Placa De Video Geforce GTX1650 4gb Msi Oc",
-            item7: "Fuente Cooler Master V2 750w 80 Bronze",
-        },
-    },
-    {
-        titulo: "PC Streamer",
-        precio: 750,
-        img: "./img/PC_Gamer_Pro.PNG",
-        lista:{
-            item1: "Kit Mid Tower Performance 2800W",
-            item2: "Intel Core i3 n10500k",
-            item3: "MSI A520-A PRO",
-            item4: "8GB DDR4 3200MHZ ADATA VALUE",
-            item5: "SSD M2 PCI-E 256GB//HHD 1TB SeaGate Barracuda",
-            item6: "Placa de Video Geforce GT 710 2GB Ram MSI",
-            item7: "Fuente y cooler Incluidos con el Gabinete",
-        },
-    }
-];
+
+let combos = [];
+
+fetch("/data/products.json")
+    .then(res => res.json())
+    .then(data =>{
+        mostrarCarrito(data);
+    })
+
 const contenedorCombos = document.querySelector("#combos");
 const carritoVacio = document.querySelector("#carrito-vacio");
 const carritoProductos = document.querySelector("#carrito-productos");
 const carritoTotal = document.querySelector("#carrito-total");
 
 // Recorro el array para mostrarlos en pantalla
+let mostrarCarrito = (combos) => {
+
 combos.forEach((combo) => {
     const div = document.createElement("div");
     div.classList.add("conteiner__combos" , "row", "mb-3");
@@ -95,7 +61,7 @@ combos.forEach((combo) => {
     div.append(btn);
     contenedorCombos.append(div);
 })
-
+};
 
 // Se actualiza el carrito en cada evento 
 function actualizarCarrito() {
