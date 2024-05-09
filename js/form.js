@@ -30,5 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
             title: "Formulario enviado con Exito",
             text: "Muchas Gracias por contactarnos",
             icon: "success"
-          });    });
+          });    
+    });
 });

@@ -19,64 +19,94 @@
         <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="body">
-    <header class="header">
-        <div class="gradiente"></div>
-          <nav class="navbar bg-body-tertiary nav">
-              <div class="container-fluid fondo__main">
-                  <div class="cont__img">
-                     <a href="../index.html"><img class="logo" src="../img/LOGO REDONDO.png" alt="Logo Marshall Tech"></a>
-                  </div>  
-                  <div class="cont__menu">
-                    <ul class="menu">
-                      <li class="item__menu" id="itemMenu">
-                        <a href="../index.html">Combos</a>
-                      </li>
-                      <li class="item__menu" id="itemMenu">
-                        <a href="./productos.html">Productos</a>
-                      </li>
-                      <li class="item__menu" id="itemMenu">
-                        <a href="#">Contactanos</a>
-                      </li>
-                      <li class="item__menu" id="itemMenu">
-                        <a href="./comollegar.html">Iniciar Sesion</a>
-                      </li>
-                    </ul>
-                </div>
-              <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler fondo__blanco boton__navbar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                  <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">San Lucifer</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Combos</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="./pages/turnos.html">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="./pages/laboratorio.html">Contactanos</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="./pages/valores.html">Como Llegar</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="./pages/preguntas.html">Preguntas Frecuentes</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex mt-3" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
-                  </div>
-                </div>
+  <header class="header">
+    <div class="gradiente"></div>
+      <nav class="navbar bg-body-tertiary nav">
+          <div class="container-fluid fondo__main">
+              <div class="cont__img">
+                 <a href="#"><img class="logo" src="../img/LOGO REDONDO.png" alt="Logo Marshall Tech"></a>
+              </div>  
+              <div class="cont__menu">
+                  <ul class="menu">
+                    <li class="item__menu" id="itemMenu">
+                      <a href="../index.html">Combos</a>
+                    </li>
+                    <li class="item__menu" id="itemMenu">
+                      <a href="./productos.html">Productos</a>
+                    </li>
+                    <li class="item__menu" id="itemMenu">
+                      <a href="./contactanos.html">Contactanos</a>
+                    </li>
+                    <li class="item__menu" id="itemMenu">
+                      <a href="./iniciarsesion.html">Iniciar Sesion</a>
+                    </li>
+                  </ul>
               </div>
-            </nav>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler fondo__blanco boton__navbar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Marshall Tech</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Combos</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./contactanos.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./iniciarsesion.html">Iniciar Sesion</a>
+                    </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+<!-- boton dark mode -->
+        <div class="theme-switch">
+          <input type="checkbox" id="theme-checkbox" />
+          <label for="theme-checkbox" id="bottonDarkMode">
+            <div></div>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </span>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                ></path>
+              </svg>
+            </span>
+          </label>
+        </div>
       </header>
 <main class="main container">
     <div class="conteiner__contacto container row">
@@ -122,9 +152,9 @@
 <footer class="footer">
     <div class="asociate">
         <div>
-            <p class="texto texto__socio">Asosiate y Obtene los Mejores Beneficios</p>
-            <p class="texto texto__chiquito">Consegui Hasta un 20% OFF Contratando Nuestros Planes de Salud Integral</p>
-        </div>
+            <p class="texto texto__socio">Asociate y Obtene los Mejores Beneficios</p>
+            <p class="texto texto__chiquito">Consegui Hasta un 20% OFF en todos nuestros combos</p>
+          </div>
         <a href="./planesSalud.html"><button type="button" class="btn btn-primary">Ver Beneficios</button></a>
     </div>
     <div class="cont__footer">
@@ -178,7 +208,6 @@
             <a href="https://ar.linkedin.com" target="_blank"><img class="img__redes" src="../img/Linkedin.jpe" alt="Logo Linkedin"></a>
         </div>
         <div class="texto copirigth">
-            <p>Por Emergencias comunicarse al 911 o 0800-SanLucifer (666-6666).</p>
             <p>®Todos los Derechos Reservados®</p>   
         </div>
         <svg class="chatea" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
@@ -188,5 +217,6 @@
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js"></script>
     <script src="../js/form.js"></script>
+    <script src="../js/main.js"></script>
     </body>
     </html>

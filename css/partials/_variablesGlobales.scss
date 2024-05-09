@@ -2,11 +2,19 @@ body{
     display: flex;
     flex-direction: column;
 }
+.darkMode {
+    background-color: #333333;
+    color: #ffffff;
+}
 a{
     text-decoration: none;
     color: white;
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
 }
 .leer{
-    color: rgb(53, 18, 134);
+    color: black;
 }
 $maincolor: rgb(122, 23, 179);
