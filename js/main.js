@@ -5,7 +5,9 @@ let combos = [];
 fetch("/data/products.json")
     .then(res => res.json())
     .then(data =>{
+        combos = data;
         mostrarCarrito(data);
+        
     })
 
 const contenedorCombos = document.querySelector("#combos");
